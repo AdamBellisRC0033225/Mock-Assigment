@@ -21,5 +21,26 @@ namespace Mock_Assigment
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Double R = Convert.ToDouble(txtRadius.Text);
+                Double V = 4.0 / 3.0 * Math.PI * R * R * R;
+                label2.Text = "Volume = " + V;
+                Double A = Math.PI * R * R;
+                label4.Text = "Area = " + A;
+            }
+            catch
+            {
+                MessageBox.Show("Please insert a numeber.");
+            }
+        }
     }
 }
